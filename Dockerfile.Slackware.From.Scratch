@@ -1,0 +1,3 @@
+FROM scratch
+COPY "./sdc3/." "/"
+LABEL Description="Slackware 15.0"
