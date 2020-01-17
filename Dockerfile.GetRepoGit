@@ -1,0 +1,13 @@
+M alpine:latest
+MAINTAINER Capitainkurn
+LABEL  Description="Teste GIT"
+
+RUN echo 'root:SuaSenhaDeRootParaOContainer' | chpasswd && \
+#
+# Instalação dos pacotes necessários
+#
+apk update && \
+apk add --no-cache --purge bash && \
+apk add --no-cache --purge git && \
+git clone https://LoginGitHub:SuaSenhaGitHub@github.com/LoginGitHub/SeuRepo.git /home/usuario/path_que_voce_quiser
+
